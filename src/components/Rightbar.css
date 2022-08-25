@@ -6,7 +6,7 @@
 .trends {
   background-color: #222b34;
   border-radius: 25px;
-  min-height: calc(100vh - 200px);
+  min-height: calc(100vh - 400px);
   max-width:290px;
   margin-top: 40px;
   padding: 20px;
@@ -14,6 +14,23 @@
   font-size: 18px;
   overflow: hidden;
 }
+
+.rules {
+    background-color: #222b34;
+    border-radius: 25px;
+    min-height: calc(100vh - 900px);
+    max-width:290px;
+    margin-top: 40px;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 10px;
+    overflow: hidden;
+    color: #caf0f8;
+  }
+
+  .color {
+    color: #caf0f8;
+  }
 
 .trend{
     display:flex;
@@ -35,7 +52,7 @@
 }
 
 .trendText {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: normal;
 }
 

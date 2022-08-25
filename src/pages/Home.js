@@ -112,7 +112,7 @@ const Home = () => {
     <div className="pageIdentify">Home</div>
       <div className="mainContent">
         <div className="profileTweet">
-          <img src={user.attributes.pfp ? user.attributes.pfp : defaultImgs[0]} className="profilePic"></img>
+          <img src={user.attributes.pfp ? user.attributes.pfp : defaultImgs[0]} className="profilePic" alt=""></img>
           <div className="tweetBox">
             <TextArea
               label=""
@@ -123,7 +123,7 @@ const Home = () => {
               width="95%"
             ></TextArea>
             {selectedFile && (
-              <img src={selectedFile} className="tweetImg"></img>
+              <img src={selectedFile} className="tweetImg" alt=""></img>
             )}
             <div className="imgOrTweet">
               <div className="imgDiv" onClick={onImageClick}>

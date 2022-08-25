@@ -1,71 +1,81 @@
 import React from "react";
-import './Rightbar.css';
-import spaceshooter from "../images/spaceshooter.jpeg";
-import netflix from "../images/netflix.jpeg";
-import academy from "../images/academy.png";
-import youtube from "../images/youtube.png";
-import js from "../images/js.png";
+import "./Rightbar.css";
+import knetflix from "../images/knetflix.png";
+import transfers from "../images/transfers.png";
+import coin from "../images/coin.png";
+import nft from "../images/nft.png";
+import dd from "../images/dd.png";
 import { Input } from "web3uikit";
-
 
 const Rightbar = () => {
   const trends = [
     {
-      img: spaceshooter,
-      text: "Learn how to build a Web3 FPS game using unity...",
-      link: "https://moralis.io/moralis-projects-learn-to-build-a-web3-space-fps-game/",
+      img: knetflix,
+      text: "Don´t miss your favourite K-Dramas in...",
+      link: "https://netflixdecentralized.netlify.app/",
     },
     {
-      img: netflix,
-      text: "The fisrt Moralis Project! Let's Netflix and chill...",
-      link: "https://moralis.io/moralis-projects-learn-to-build-a-web3-netflix-clone/",
+      img: transfers,
+      text: "Send money to anyone in the world in seconds...",
+      link: "https://cryptotransfers.netlify.app/",
     },
     {
-      img: academy,
-      text: "Master DeFi in 2022. Start  at the Moralis Academy...",
-      link: "https://academy.moralis.io/courses/defi-101",
+      img: coin,
+      text: "Investing in the cryptocurrency market is something...",
+      link: "https://coinmarkethelp.netlify.app/",
     },
     {
-      img: js,
-      text: "Become a Web3 Developer with just simple JS...",
-      link: "https://academy.moralis.io/all-courses",
+      img: nft,
+      text: "There are only 10000 in existence and 9981 remains to minted...",
+      link: "https://awesomepunks.netlify.app/",
     },
     {
-      img: youtube,
-      text: "Best youtube channel to learn about Web3...",
-      link: "https://www.youtube.com/channel/UCgWS9Q3P5AxCWyQLT2kQhBw",
+      img: dd,
+      text: "We are core developers in the most transformative decentralized projects...",
+      link: "https://www.draftdigital.org/",
     },
   ];
 
   return (
     <>
-    <div className="rightbarContent">
-      <Input
-        label="Search Twitter"
-        name ="Search Twitter"
-        prefixIcon="search"
-        labelBgColor="#141d26" 
-        >
-      </Input>
+      <div className="rightbarContent">
+        <Input
+          label="Search Twitter"
+          name="Search Twitter"
+          prefixIcon="search"
+          labelBgColor="#141d26"
+        ></Input>
 
-    <div className="trends">
-      News For You
-      {trends.map((e) => {
-          return(
-            <>
-            <div className="trend" onClick={() => window.open(e.link)}>
-              <img src={e.img} className="trendImg"></img>
-              <div className="trendText">{e.text}</div>
-            </div>
-            </>
-          )
-      })}
-    </div>
+        <div className="rules">
+          <p>This website rules under contract:</p>
+          <a className="color" href="https://mumbai.polygonscan.com/address/0xc4d2652155135F7F0fdAcb2069426df39640d010" target="_blank" rel="noreferrer">
+            0xc4d2652155135F7F0fdAcb2069426df39640d010
+          </a>
+          <br />
+          <br />
+          <p>
+            Post your tweet and click on: <br />
+            tweet button to save in web2 <br />
+            Polygon button to save in web3
+          </p>
+        </div>
 
-    </div>
+        <div className="trends">
+          News For You
+          {trends.map((e) => {
+            return (
+              <>
+                <div className="trend" onClick={() => window.open(e.link)}>
+                  <img src={e.img} className="trendImg" alt=""></img>
+                  <div className="trendText">{e.text}</div>
+                </div>
+              </>
+            );
+          })}
+        </div>
+      </div>
     </>
   );
 };
 
 export default Rightbar;
-
